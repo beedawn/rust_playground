@@ -1,0 +1,15 @@
+/Users/bee/GitHub/rust_playground/web_app/target/debug/deps/libzerocopy-9a39199dd671288f.rmeta: /Users/bee/.cargo/registry/src/index.crates.io-6f17d22bba15001f/zerocopy-0.7.32/src/lib.rs /Users/bee/.cargo/registry/src/index.crates.io-6f17d22bba15001f/zerocopy-0.7.32/src/macros.rs /Users/bee/.cargo/registry/src/index.crates.io-6f17d22bba15001f/zerocopy-0.7.32/src/macro_util.rs /Users/bee/.cargo/registry/src/index.crates.io-6f17d22bba15001f/zerocopy-0.7.32/src/post_monomorphization_compile_fail_tests.rs /Users/bee/.cargo/registry/src/index.crates.io-6f17d22bba15001f/zerocopy-0.7.32/src/util.rs /Users/bee/.cargo/registry/src/index.crates.io-6f17d22bba15001f/zerocopy-0.7.32/src/third_party/rust/layout.rs /Users/bee/.cargo/registry/src/index.crates.io-6f17d22bba15001f/zerocopy-0.7.32/src/wrappers.rs
+
+/Users/bee/GitHub/rust_playground/web_app/target/debug/deps/libzerocopy-9a39199dd671288f.rlib: /Users/bee/.cargo/registry/src/index.crates.io-6f17d22bba15001f/zerocopy-0.7.32/src/lib.rs /Users/bee/.cargo/registry/src/index.crates.io-6f17d22bba15001f/zerocopy-0.7.32/src/macros.rs /Users/bee/.cargo/registry/src/index.crates.io-6f17d22bba15001f/zerocopy-0.7.32/src/macro_util.rs /Users/bee/.cargo/registry/src/index.crates.io-6f17d22bba15001f/zerocopy-0.7.32/src/post_monomorphization_compile_fail_tests.rs /Users/bee/.cargo/registry/src/index.crates.io-6f17d22bba15001f/zerocopy-0.7.32/src/util.rs /Users/bee/.cargo/registry/src/index.crates.io-6f17d22bba15001f/zerocopy-0.7.32/src/third_party/rust/layout.rs /Users/bee/.cargo/registry/src/index.crates.io-6f17d22bba15001f/zerocopy-0.7.32/src/wrappers.rs
+
+/Users/bee/GitHub/rust_playground/web_app/target/debug/deps/zerocopy-9a39199dd671288f.d: /Users/bee/.cargo/registry/src/index.crates.io-6f17d22bba15001f/zerocopy-0.7.32/src/lib.rs /Users/bee/.cargo/registry/src/index.crates.io-6f17d22bba15001f/zerocopy-0.7.32/src/macros.rs /Users/bee/.cargo/registry/src/index.crates.io-6f17d22bba15001f/zerocopy-0.7.32/src/macro_util.rs /Users/bee/.cargo/registry/src/index.crates.io-6f17d22bba15001f/zerocopy-0.7.32/src/post_monomorphization_compile_fail_tests.rs /Users/bee/.cargo/registry/src/index.crates.io-6f17d22bba15001f/zerocopy-0.7.32/src/util.rs /Users/bee/.cargo/registry/src/index.crates.io-6f17d22bba15001f/zerocopy-0.7.32/src/third_party/rust/layout.rs /Users/bee/.cargo/registry/src/index.crates.io-6f17d22bba15001f/zerocopy-0.7.32/src/wrappers.rs
+
+/Users/bee/.cargo/registry/src/index.crates.io-6f17d22bba15001f/zerocopy-0.7.32/src/lib.rs:
+/Users/bee/.cargo/registry/src/index.crates.io-6f17d22bba15001f/zerocopy-0.7.32/src/macros.rs:
+/Users/bee/.cargo/registry/src/index.crates.io-6f17d22bba15001f/zerocopy-0.7.32/src/macro_util.rs:
+/Users/bee/.cargo/registry/src/index.crates.io-6f17d22bba15001f/zerocopy-0.7.32/src/post_monomorphization_compile_fail_tests.rs:
+/Users/bee/.cargo/registry/src/index.crates.io-6f17d22bba15001f/zerocopy-0.7.32/src/util.rs:
+/Users/bee/.cargo/registry/src/index.crates.io-6f17d22bba15001f/zerocopy-0.7.32/src/third_party/rust/layout.rs:
+/Users/bee/.cargo/registry/src/index.crates.io-6f17d22bba15001f/zerocopy-0.7.32/src/wrappers.rs:
+
+# env-dep:CARGO_PKG_VERSION=0.7.32
