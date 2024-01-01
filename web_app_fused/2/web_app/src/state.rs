@@ -8,7 +8,6 @@ use serde_json::json;
 
 
 pub fn read_file(file_name: &str) -> Map<String, Value> {
-    println!("{}",file_name);
     let mut file = File::open(file_name.to_string()).unwrap();
 
     let mut data = String::new();
