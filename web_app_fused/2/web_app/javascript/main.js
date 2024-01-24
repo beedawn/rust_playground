@@ -19,6 +19,13 @@ let title = items[i]["title"];
 let placeholderId = processType +
 "-" + title.replaceAll(" ", "-");
 
+
+
+
+
+
+
+
 placeholder += '<div class="itemContainer">' +
 '<p>' + title + '</p>' +
 '<div class="actionButton" ' +
@@ -36,7 +43,10 @@ document.getElementById(
 itemsMeta[i]["id"]).addEventListener(
 "click", processFunction);
 }
-
+document.getElementById("completeNum").innerHTML =
+JSON.parse(this.responseText)["done_item_count"];
+document.getElementById("pendingNum").innerHTML =
+JSON.parse(this.responseText)["pending_item_count"];
 
 }
 
