@@ -12,7 +12,7 @@ fn main() -> Result<(), eframe::Error> {
         ..Default::default()
     };
     eframe::run_native(
-        "Countdown",
+        "countdown",
         options,
         Box::new(|cc| {
             // This gives us image support:
@@ -45,6 +45,7 @@ impl eframe::App for MyApp {
     fn update(&mut self, ctx: &egui::Context, _frame: &mut eframe::Frame) {
         egui::CentralPanel::default().show(ctx, |ui| {
             //ui.heading("countdown");
+
             ui.horizontal(|ui| {
              //   let name_label = ui.label("Your name: ");
               //  ui.text_edit_singleline(&mut self.now_time)
