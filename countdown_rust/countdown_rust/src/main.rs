@@ -24,17 +24,19 @@ fn main() -> Result<(), eframe::Error> {
 }
 
 struct MyApp {
-    now_time: NaiveDate,
+    now_offset: OffsetDateTime,
+    now_date: NaiveDate,
     deadline: NaiveDate,
-    countdown: i64,
+    countdown: chrono::Duration,
 }
 
 impl Default for MyApp {
     fn default() -> Self {
         Self {
-            now_time: NaiveDate::from_ymd_opt(OffsetDateTime::now_utc().year(),OffsetDateTime::now_utc().month() as u32,OffsetDateTime::now_utc().day() as u32).expect("today date error"),
-            deadline: NaiveDate::from_ymd_opt(2024,1,15).expect("error"),
-            countdown: 0,
+            now_offset: OffsetDateTime::now_utc(),
+            now_date: NaiveDate::from_ymd_opt(OffsetDateTime::now_utc().year(),OffsetDateTime::now_utc().month() as u32,OffsetDateTime::now_utc().day() as u32).expect("today date error"),
+            deadline: NaiveDate::from_ymd_opt(OffsetDateTime::now_utc().year(),OffsetDateTime::now_utc().month() as u32,OffsetDateTime::now_utc().day() as u32).expect("today date error"),
+            countdown: chrono::Duration::seconds(0),
 
 
         }
@@ -48,17 +50,17 @@ impl eframe::App for MyApp {
 
             ui.horizontal(|ui| {
              //   let name_label = ui.label("Your name: ");
-              //  ui.text_edit_singleline(&mut self.now_time)
+              //  ui.text_edit_singleline(&mut self.now_date)
               //       .labelled_by(name_label.id);
             });
-           // ui.label(format!("Today's date is '{}'", self.now_time));
-            //ui.add(egui_extras::DatePickerButton::new(&mut self.now_time));
+           // ui.label(format!("Today's date is '{}'", self.now_date));
+            //ui.add(egui_extras::DatePickerButton::new(&mut self.now_date));
            // ui.add(egui_extras::DatePickerButton::new(&mut self.deadline));
             if ui.add(egui_extras::DatePickerButton::new(&mut self.deadline).arrows(false)).clicked_elsewhere(){
                 println!("calendar clicker!");
 
-                let utc = self.now_time;
-                println!("The date is: {}", utc);
+
+                println!("The date is: {}", self.now_date);
                 // println!("The date is: {}", utc.date());
 
                 // let date = utc.date();
@@ -72,20 +74,21 @@ impl eframe::App for MyApp {
                 let dt = self.deadline;
                 println!("Calculated date is {}",dt);
 
-                let diff = dt.sub(utc);
+                let diff = dt.sub(self.now_date);
                 println!("{}", diff);
                 println!("Weeks until deadline: {}", diff.num_weeks());
                 println!("Days until deadline: {}", diff.num_days());
                 println!("Hours until deadline: {}", diff.num_hours());
                 println!("Seconds until deadline: {}", diff.num_seconds());
 
-                self.countdown = diff.num_days().clone();
+                self.countdown = diff.clone();
             }
-            //ui.label(format!("Hello '{}', age {}", self.now_time, self.deadline));
+
+            //ui.label(format!("Hello '{}', age {}", self.now_date, self.deadline));
             // if ui.button("Test").clicked(){
             //
             //
-            //     let utc = self.now_time;
+            //     let utc = self.now_date;
             //     println!("The date is: {}", utc);
             //     // println!("The date is: {}", utc.date());
             //
@@ -119,12 +122,18 @@ impl eframe::App for MyApp {
             //     let diff_seconds = diff.num_seconds() - (60*diff.num_minutes());
             //     println!("second until deadline: {}", diff_seconds);
             // };
-            ui.label(format!("Days to date:{}",self.countdown));
+            ui.label(format!("Now Time:{}:{}:{}",self.now_offset.hour(),self.now_offset.minute(),self.now_offset.second()));
+            ui.label(format!("Days to date:{:?}",self.countdown.num_days()));
             // ui.image(egui::include_image!(
             //     "../../../crates/egui/assets/ferris.png"
             // ));
         });
+        self.now_offset = OffsetDateTime::now_utc();
+        self.countdown = self.now_offset.sub(self.deadline);
+        ctx.request_repaint_after(core::time::Duration::from_secs(5));
     }
+
+
 }
 
 
