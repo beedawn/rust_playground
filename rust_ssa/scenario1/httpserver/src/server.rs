@@ -5,11 +5,11 @@ use std::net::TcpListener;
 use std::str;
 
 pub struct Server<'a> {
-    socker_addr: &'a str,
+    socket_addr: &'a str,
 }
 impl<'a> Server<'a>{
     pub fn new(socket_addr: &'a str) -> Self {
-        Server { socker_addr }
+        Server { socket_addr }
     }
     pub fn run(&self){
     //start a server listening on socket address
